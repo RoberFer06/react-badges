@@ -1,0 +1,5 @@
+{
+   // Enable Emmet abbreviations in languages that are not supported by default. Add a mapping here between the language and emmet supported language.
+  //  E.g.: {"vue-html": "html", "javascript": "javascriptreact"}
+    "emmet.includeLanguages":  {"vue-html": "html", "javascript": "javascriptreact"},
+}
