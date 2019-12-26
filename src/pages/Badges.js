@@ -8,15 +8,15 @@ import api from '../api'
 
 export default class Badges extends Component {
 
-    
+
 
     constructor(props) {
         super(props)
         console.log('1. constructor')
         this.state = {
-            loading : true,
+            loading: true,
             data: undefined,
-            error : null
+            error: null
         }
     }
 
@@ -26,14 +26,14 @@ export default class Badges extends Component {
 
     fechData = async () => {
         this.setState({
-            loading : true,
+            loading: true,
             error: null
         })
         try {
             const data = await api.badges.list();
-            this.setState({loading : false , data : data})
-        }catch (error) {
-            this.setState({loading : false, error : error})
+            this.setState({ loading: false, data: data })
+        } catch (error) {
+            this.setState({ loading: false, error: error })
         }
 
     }
@@ -54,12 +54,14 @@ export default class Badges extends Component {
 
                     </div>
                     <div className="Badges__container">
-                        <div className="Badges__buttons">
-                            <Link to="/badges/new" className="btn btn-primary">nuevo</Link>
-                        </div>
+
                         <div className="Badges__list">
+
                             <div className="Badges__container">
-                               <BadgeList data= {this.state.data} /> 
+                                <div className="Badges__buttons">
+                                    <Link to="/badges/new" className="btn btn-primary">nuevo</Link>
+                                </div>
+                                <BadgeList data={this.state.data} />
                             </div>
                         </div>
                     </div>

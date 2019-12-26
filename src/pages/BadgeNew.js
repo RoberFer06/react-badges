@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Badge from '../components/Badge'
 import BadgeForm from '../components/BadgeForm'
-import logo from '../images/badge-header.svg'
+import logo from '../images/platziconf-logo.svg'
 import './styles/BadgeNew.css'
 
 export default class BadgeNew extends Component {
@@ -29,7 +29,7 @@ export default class BadgeNew extends Component {
         return (
             <React.Fragment>
                <div className="BadgeNew__hero">
-                   <img src={logo} alt=""></img>
+                   <img className="BadgeNew__hero-logo" src={logo} alt=""></img>
 
                </div>
                <div className="container">
