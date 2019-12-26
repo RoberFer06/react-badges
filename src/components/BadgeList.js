@@ -11,11 +11,18 @@ export default class BadgeList extends Component {
                             return (
                                 <li key={badge.id}>
                                     <div className="BadgesListItem">
-                                        <img 
-                                        src={badge.avatarUrl}
-                                        className="BadgesListItem__avatar"
-                                        alt="logo"/>
-                                        {badge.firstName}
+                                        <img
+                                            src={badge.avatarUrl}
+                                            className="BadgesListItem__avatar"
+                                            alt="logo" />
+                                        <div>
+                                            <strong>
+                                                {badge.firstName} 
+                                            </strong>
+                                            <br />@{badge.twitter}
+                                            <br />
+                                            {badge.jobTitle}
+                                        </div>
 
                                     </div>
                                 </li>
